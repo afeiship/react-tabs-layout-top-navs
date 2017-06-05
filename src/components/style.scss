@@ -1,9 +1,7 @@
-.react-tabs-layout-top-navs{
+.react-tabs-layout-vertical{
   >.react-tabs-menu{
-    //todo: menu-overflow ?
     position: fixed;
     left:0;right:0;
-    overflow: auto;
     >.scroller{
       -webkit-overflow-scrolling: touch;
       width:102%;

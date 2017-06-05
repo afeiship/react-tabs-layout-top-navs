@@ -1,5 +1,5 @@
-# react-tabs-layout-top-navs
-> Top navigation layout for react tabs.
+# react-tabs-layout-vertical
+> Vertical layout for react tabs.
 
 
 ## properties:

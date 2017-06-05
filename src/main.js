@@ -1,2 +1,2 @@
-import ReactTabsLayoutTopNavs from 'components/react-tabs-layout-top-navs';
-export default ReactTabsLayoutTopNavs;
+import ReactTabsLayoutVertical from 'components/react-tabs-layout-vertical';
+export default ReactTabsLayoutVertical;

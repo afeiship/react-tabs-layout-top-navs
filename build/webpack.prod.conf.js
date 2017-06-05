@@ -9,8 +9,8 @@ base.entry = {
 base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
-  filename: 'react-tabs-layout-top-navs.js',
-  library: 'ReactTabsLayoutTopNavs',
+  filename: 'react-tabs-layout-vertical.js',
+  library: 'ReactTabsLayoutVertical',
   libraryTarget: 'umd'
 }
 

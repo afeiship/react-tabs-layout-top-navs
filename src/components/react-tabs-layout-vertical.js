@@ -5,14 +5,12 @@ import { ReactTabs, ReactTabsBody, ReactTabsMenu } from 'react-tabs'
 
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from 'noop';
-import objectAssign from 'object-assign';
 
 export default class extends PureComponent{
   /*===properties start===*/
   static propTypes = {
     className:PropTypes.string,
-    menuOverflow: PropTypes.oneOf(['overflow','hidden','auto'])
+    menuOverflow: PropTypes.oneOf(['scroll','hidden','auto'])
   };
 
   static defaultProps = {
@@ -34,7 +32,7 @@ export default class extends PureComponent{
     }
   }
 
-  geteInitialChlidren(inMenu){
+  getInitialChlidren(inMenu){
     const {children} = this.props;
     return Children.map(children,(child)=>{
       const {title,badge,...childProps} = child.props;
@@ -63,9 +61,9 @@ export default class extends PureComponent{
   render(){
     let menu = [];
     const {className,menuOverflow,...props} = this.props;
-    const children = this.geteInitialChlidren(menu);
+    const children = this.getInitialChlidren(menu);
     return (
-      <ReactTabs {...props} className={classNames('react-tabs-layout-top-navs',className)}>
+      <ReactTabs {...props} className={classNames('react-tabs-layout-vertical',className)}>
         <ReactTabsMenu overflow={menuOverflow} onItemClick={this._onClick} activeIndex={this.state.activeIndex} children={this.template(menu)} />
         <ReactTabsBody activeIndex={this.state.activeIndex} children={children} />
       </ReactTabs>
