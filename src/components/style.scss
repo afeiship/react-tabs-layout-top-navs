@@ -1,12 +1,21 @@
 .react-tabs-layout-top-navs{
   >.react-tabs-menu{
-    height: 44px;
-    line-height: 44px;
-    >.item{
-      float: left;
+    //todo: menu-overflow ?
+    position: fixed;
+    left:0;right:0;
+    overflow: auto;
+    >.scroller{
+      -webkit-overflow-scrolling: touch;
+      width:102%;
+      height: 44px;
+      line-height: 44px;
+      >.item{
+        float: left;
+      }
     }
   }
   >.react-tabs-body{
+    padding-top: 44px;
     >.item{
       display: none;
       &.active{

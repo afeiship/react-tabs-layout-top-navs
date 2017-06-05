@@ -31,18 +31,33 @@ ul,li{list-style: none;}
     }
   }
 
-  .react-tabs-layout-top-navs{
-      >.react-tabs-menu{
-      >.item{
-        width:33.333%;
-        color:#000;
-        background: #eee;
-        text-align: center;
-        &.active{
-          color:#f00;
-          background: #ddd;
-        }
+  .demo1 {
+    >.react-tabs-menu{
+      .scroller{
+        width:100%;
       }
     }
+  }
+
+  .demo2 {
+    >.react-tabs-menu{
+      .scroller{
+        width:136%;
+      }
+    }
+  }
+  .react-tabs-layout-top-navs{
+      >.react-tabs-menu{
+        .item{
+          width:125px;
+          color:#000;
+          background: #eee;
+          text-align: center;
+          &.active{
+            color:#f00;
+            background: #ddd;
+          }
+        }
+      }
   }
 }

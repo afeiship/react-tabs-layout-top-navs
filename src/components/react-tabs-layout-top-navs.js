@@ -11,7 +11,8 @@ import objectAssign from 'object-assign';
 export default class extends PureComponent{
   /*===properties start===*/
   static propTypes = {
-    className:PropTypes.string
+    className:PropTypes.string,
+    menuOverflow: PropTypes.oneOf(['overflow','hidden','auto'])
   };
 
   static defaultProps = {
@@ -60,11 +61,11 @@ export default class extends PureComponent{
 
   render(){
     let menu = [];
-    const {className,...props} = this.props;
+    const {className,menuOverflow,...props} = this.props;
     const children = this.geteInitialChlidren(menu);
     return (
       <ReactTabs className={classNames('react-tabs-layout-top-navs',className)}>
-        <ReactTabsMenu onItemClick={this._onClick} activeIndex={this.state.activeIndex} children={this.template(menu)} />
+        <ReactTabsMenu overflow={menuOverflow} onItemClick={this._onClick} activeIndex={this.state.activeIndex} children={this.template(menu)} />
         <ReactTabsBody activeIndex={this.state.activeIndex} children={children} />
       </ReactTabs>
     );
