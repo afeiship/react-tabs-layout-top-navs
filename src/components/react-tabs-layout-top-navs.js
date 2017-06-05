@@ -16,6 +16,7 @@ export default class extends PureComponent{
   };
 
   static defaultProps = {
+    menuOverflow:'hidden'
   };
   /*===properties end===*/
 
@@ -64,7 +65,7 @@ export default class extends PureComponent{
     const {className,menuOverflow,...props} = this.props;
     const children = this.geteInitialChlidren(menu);
     return (
-      <ReactTabs className={classNames('react-tabs-layout-top-navs',className)}>
+      <ReactTabs {...props} className={classNames('react-tabs-layout-top-navs',className)}>
         <ReactTabsMenu overflow={menuOverflow} onItemClick={this._onClick} activeIndex={this.state.activeIndex} children={this.template(menu)} />
         <ReactTabsBody activeIndex={this.state.activeIndex} children={children} />
       </ReactTabs>
