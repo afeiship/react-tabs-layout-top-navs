@@ -1,0 +1,17 @@
+.react-tabs-layout-top-navs{
+  >.react-tabs-menu{
+    height: 44px;
+    line-height: 44px;
+    >.item{
+      float: left;
+    }
+  }
+  >.react-tabs-body{
+    >.item{
+      display: none;
+      &.active{
+       display: block;
+      }
+    }
+  }
+}
